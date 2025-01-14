@@ -29,13 +29,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center mt-12 text-black space-y-4">
+    <div className="flex flex-col justify-center items-center w-full h-screen gap-y-3">
       <div className="w-96 space-y-6">
         <div className="mb-4">
-          <label className="block text-lg font-medium text-white">User 1</label>
+          <label className="block text-lg font-medium">User 1</label>
           <input
             type="text"
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+            className="mt-1 px-2 block w-full bg-transparent border-2 border-foreground border-gray-300 rounded-md shadow-sm sm:text-lg"
             value={userName1}
             onChange={(e) => {
               setUserName1(e.target.value);
@@ -43,10 +43,10 @@ export default function Home() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-lg font-medium text-white">User 2</label>
+          <label className="block text-lg font-medium">User 2</label>
           <input
             type="text"
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+            className="mt-1 px-2 block w-full bg-transparent border-2 border-foreground border-gray-300 rounded-md shadow-sm sm:text-lg"
             value={userName2}
             onChange={(e) => {
               setUserName2(e.target.value);
@@ -54,10 +54,10 @@ export default function Home() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-lg font-medium text-white">Link</label>
+          <label className="block text-lg font-medium">Link</label>
           <input
             type="text"
-            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+            className="mt-1 px-2 block w-full bg-transparent border-2 border-foreground border-gray-300 rounded-md shadow-sm sm:text-lg"
             value={link}
             onChange={(e) => {
               setLink(e.target.value);
@@ -67,7 +67,7 @@ export default function Home() {
       </div>
 
       <button
-        className="bg-white px-10 hover:bg-gray-300 transition-all hover:scale-110 py-3 text-black text-xl rounded-lg"
+        className="mt-4 px-8 py-4 bg-transparent border-2 border-foreground text-foreground font-semibold rounded-lg transition-all hover:scale-110"
         onClick={handdleClick}
       >
         Save

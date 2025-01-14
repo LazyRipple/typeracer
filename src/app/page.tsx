@@ -16,23 +16,24 @@ export default function Home() {
     setLink(data.link);
   };
   return (
-    <div className="text-center mt-12">
+    <div className="flex flex-col justify-center items-center w-full h-screen gap-y-3 pb-5">
       <button
         onClick={handleClick}
-        className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg transition-all hover:scale-110 hover:bg-blue-700"
+        className="absolute bottom-4 right-4 px-8 py-4 bg-transparent border-2 border-foreground text-foreground font-semibold rounded-lg transition-all hover:scale-110"
       >
         {" "}
         Refresh{" "}
       </button>
-      <h1 className="text-5xl font-bold">typeracer</h1>
+      <h1 className="text-6xl font-bold pt-6">typeracer</h1>
       <p className="mt-2 text-lg">CP Olympics 2024</p>
-      <p className="text-sm text-gray-600">13 / 2 / 2025</p>
-      <div className="flex justify-center gap-64 mt-4 text-3xl">
-        <span className="px-4 py-2">{userName1}</span>
-        <span className="px-4 py-2">{userName2}</span>
+      <p className="text-sm text-gray-500">13 / 2 / 2025</p>
+      <div className="grid grid-cols-9 mt-4 text-3xl w-full">
+        <div className="col-span-4 px-4 py-2 pr-4 text-center">{userName1}</div>
+        <div className="col-span-1 flex justify-center items-center">VS</div>
+        <div className="col-span-4 px-4 py-2 pl-4 text-center">{userName2}</div>
       </div>
       <Link href={link} target="_blank">
-        <button className="mt-4 px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg transition-all hover:scale-110 hover:bg-blue-700">
+        <button className="mt-4 px-8 py-4 bg-transparent border-2 border-foreground font-semibold rounded-lg transition-all hover:scale-110">
           Join Race
         </button>
       </Link>
